@@ -72,6 +72,11 @@ header {
   line-height: 150%;
 }
 
+.person__extra-information a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 .person__nav ul {
   display: flex;
   justify-content: flex-end;
@@ -184,4 +189,53 @@ footer {
 .icon__vk-svg:hover,
 .icon__git-svg:hover {
   width: 50px;
+}
+
+.expansion-panel__checkbox {
+  display: none;
+}
+
+.expansion-panel__label {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: "Manjari", "Arial", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 31.5px;
+  border-top: 5px solid var(--darkgrey);
+  border-bottom: 2px solid var(--darkgrey);
+  padding-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.expansion-panel__label::after {
+  content: url("../assets/menu-to-close.svg");
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 3px;
+  top: 10px;
+}
+
+.expansion-panel__checkbox ~ .education {
+  transition: max-height 0.3s, opacity 0.3s;
+  opacity: 1;
+  max-height: 450px;
+}
+
+.expansion-panel__checkbox:checked ~ .education {
+  opacity: 0;
+  max-height: 0;
+}
+
+.expansion-panel__checkbox:checked + .expansion-panel__label::after {
+  content: url("../assets/menu-to-open.svg");
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 3px;
+  top: 10px;
 }
