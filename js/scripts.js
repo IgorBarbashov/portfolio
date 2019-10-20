@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
 
 function showTheyalow() {
   window.iframeTheyalow.style.width = "100%";
-  if (window.innerWidth < 720) {
+  if (window.innerWidth < 640) {
     window.buttonToMobile.style.display = "none";
   }
   window.iframeWrapper.style.display = "block";
@@ -26,7 +26,7 @@ function showTheyalow() {
 
 function showRepair() {
   window.iframeRepair.style.width = "100%";
-  if (window.innerWidth < 720) {
+  if (window.innerWidth < 375) {
     window.buttonToMobile.style.display = "none";
   }
   window.iframeWrapper.style.display = "block";
@@ -46,7 +46,7 @@ function hideIframes() {
 }
 
 function toMobile() {
-  window.iframeTheyalow.style.width = "375px";
+  window.iframeTheyalow.style.width = "640px";
   window.iframeRepair.style.width = "375px";
   window.buttonToMobile.style.display = "none";
   window.buttonToDesktop.style.display = "block";

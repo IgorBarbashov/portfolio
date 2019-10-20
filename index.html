@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/scripts.js"></script>
     <title>Igor Barbashov - Junior Frontend Developer CV</title>
   </head>
@@ -141,20 +143,55 @@
         </section>
         <section class="projects" id="projects">
           <h2 class="projects-title">Projects</h2>
-          <a
-            onclick="showTheyalow()"
-            href="./projects//theyalow/index.html"
-            target="iframe_theyalow"
-            rel="noopener noreferrer"
-            >theyalow</a
-          >
-          <a
-            onclick="showRepair()"
-            href="./projects/repair-design-project/index.html"
-            target="iframe_repair"
-            rel="noopener noreferrer"
-            >repair-design-project</a
-          >
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide__text">
+                  <div class="swiper-slide__text-title">
+                    Repair Design Project
+                  </div>
+                  Support responsive web design. It means when we change width
+                  of page, the elements are shown correctly. Text and images
+                  positioned correctly at both desktop and mobile resolutions.
+                </div>
+                <div class="swiper-slide__image">
+                  <a
+                    onclick="showRepair()"
+                    href="./projects/repair-design-project/index.html"
+                    target="iframe_repair"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/projects-repair.png"
+                      alt="Project Repair-design"
+                  /></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__text">
+                  <div class="swiper-slide__text-title">
+                    Theyalow
+                  </div>
+                  Create a web page, strictly according to example. You must use
+                  pure HTML and CSS in your solution.
+                </div>
+                <div class="swiper-slide__image">
+                  <a
+                    onclick="showTheyalow()"
+                    href="./projects//theyalow/index.html"
+                    target="iframe_theyalow"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/projects-theyalow.png"
+                      alt="Project Repair-design"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </section>
         <section class="summary" id="summary">
           <article>
@@ -368,5 +405,15 @@
         Back
       </button>
     </section>
+    <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        direction: "horizontal",
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    </script>
   </body>
 </html>

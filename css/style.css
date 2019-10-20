@@ -305,3 +305,32 @@ footer {
 .portfolio__button-to-desktop {
   display: none;
 }
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-slide {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-slide__text {
+  margin-right: 10px;
+}
+
+.swiper-slide__text-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.swiper-slide__image {
+  height: 100%;
+}
+
+.swiper-slide__image img {
+  height: 100%;
+}
