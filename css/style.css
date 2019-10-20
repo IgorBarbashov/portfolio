@@ -17,6 +17,10 @@ body {
   font-family: "Manjari", "Arial", sans-serif;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 header {
   padding-top: 10px;
 
@@ -229,6 +233,7 @@ footer {
 .expansion-panel__checkbox:checked ~ .education {
   opacity: 0;
   max-height: 0;
+  display: none;
 }
 
 .expansion-panel__checkbox:checked + .expansion-panel__label::after {
@@ -238,4 +243,65 @@ footer {
   height: 20px;
   right: 3px;
   top: 10px;
+}
+
+.iframe_theyalow,
+.iframe_repair {
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  z-index: 999;
+
+  display: none;
+}
+
+.iframe_wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #363636;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+}
+
+.projects-title {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 5px solid var(--darkgrey);
+}
+
+.portfolio-buttons {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 10px;
+  z-index: 9999;
+}
+
+.portfolio__button-to-mobile,
+.portfolio__button-to-desktop,
+.portfolio__button-back {
+  display: block;
+  width: 100px;
+  height: 50px;
+  margin-top: 5px;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.portfolio__button-to-desktop {
+  display: none;
 }

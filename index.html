@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap"
       rel="stylesheet"
     />
+    <script src="./js/scripts.js"></script>
     <title>Igor Barbashov - Junior Frontend Developer CV</title>
   </head>
   <body>
@@ -138,11 +139,23 @@
             </ul>
           </article>
         </section>
-
-        <!-- current -->
-
-        <section class="projects" id="projects"></section>
-
+        <section class="projects" id="projects">
+          <h2 class="projects-title">Projects</h2>
+          <a
+            onclick="showTheyalow()"
+            href="./projects//theyalow/index.html"
+            target="iframe_theyalow"
+            rel="noopener noreferrer"
+            >theyalow</a
+          >
+          <a
+            onclick="showRepair()"
+            href="./projects/repair-design-project/index.html"
+            target="iframe_repair"
+            rel="noopener noreferrer"
+            >repair-design-project</a
+          >
+        </section>
         <section class="summary" id="summary">
           <article>
             <h2>Summary</h2>
@@ -341,5 +354,19 @@
         </div>
       </div>
     </footer>
+    <iframe class="iframe_theyalow" name="iframe_theyalow"></iframe>
+    <iframe class="iframe_repair" name="iframe_repair"></iframe>
+    <div class="iframe_wrapper"></div>
+    <section class="portfolio-buttons">
+      <button class="portfolio__button-to-mobile" onclick="toMobile()">
+        To Mobile
+      </button>
+      <button class="portfolio__button-to-desktop" onclick="toDesktop()">
+        To Desktop
+      </button>
+      <button class="portfolio__button-back" onclick="hideIframes()">
+        Back
+      </button>
+    </section>
   </body>
 </html>
