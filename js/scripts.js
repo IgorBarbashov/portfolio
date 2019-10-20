@@ -11,6 +11,14 @@ window.addEventListener("load", function() {
     ".portfolio__button-to-desktop"
   );
   window.buttonBack = document.querySelector(".portfolio__button-back");
+  window.buttonShowDescription = document.querySelectorAll(
+    ".swiper-slide__toggle-description"
+  );
+  window.buttonHideDescription = document.querySelectorAll(
+    ".swiper-slide__toggle-image"
+  );
+  window.allSlideText = document.querySelectorAll(".swiper-slide__text");
+  window.allSlideImage = document.querySelectorAll(".swiper-slide__image");
 });
 
 function showTheyalow() {
@@ -57,4 +65,18 @@ function toDesktop() {
   window.iframeRepair.style.width = "100%";
   window.buttonToMobile.style.display = "block";
   window.buttonToDesktop.style.display = "none";
+}
+
+function showDescription() {
+  window.buttonShowDescription.forEach(el => (el.style.visibility = "hidden"));
+  window.buttonHideDescription.forEach(el => (el.style.visibility = "visible"));
+  window.allSlideText.forEach(el => (el.style.display = "block"));
+  window.allSlideImage.forEach(el => (el.style.display = "none"));
+}
+
+function hideDescription() {
+  window.buttonShowDescription.forEach(el => (el.style.visibility = "visible"));
+  window.buttonHideDescription.forEach(el => (el.style.visibility = "hidden"));
+  window.allSlideText.forEach(el => (el.style.display = "none"));
+  window.allSlideImage.forEach(el => (el.style.display = "block"));
 }
